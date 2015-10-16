@@ -11,7 +11,7 @@ Source2:    GPL
 
 BuildArch: noarch
 
-Requires:   centos-release
+Requires:   system-release
 Requires:   centos-release-scl-rh
 
 %description

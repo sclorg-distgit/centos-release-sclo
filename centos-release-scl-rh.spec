@@ -11,7 +11,7 @@ Source2:    GPL
 
 BuildArch: noarch
 
-Requires:   centos-release
+Requires:   system-release
 
 %description
 yum Configs and basic docs for Software Collections as delivered via the CentOS SCLo SIG.
