@@ -8,6 +8,8 @@ URL:        http://wiki.centos.org/SpecialInterestGroup/SCLo
 Source0:    CentOS-SCLo.repo
 Source1:    RPM-GPG-KEY-CentOS-SIG-SCLo
 
+BuildArch: noarch
+
 Requires:   centos-release
 
 %description
