@@ -1,10 +1,7 @@
-# FIXME rh / community ?
-%global SclGroup rh
-
-Name:       centos-release-sclo-%{SclGroup}
+Name:       centos-release-scl-rh
 Version:    1
 Release:    1%{?dist}
-Summary:    Software collections from the CentOS SCLo SIG 
+Summary:    Software collections from the CentOS SCLo SIG (upstream scl only)
 
 License:    GPL
 URL:        http://wiki.centos.org/SpecialInterestGroup/SCLo
@@ -19,8 +16,8 @@ yum Configs and basic docs for Software Collections as delivered via the CentOS 
 %prep
 
 %install
-install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-SCLo-%{SclGroup}.repo
-sed -i -e "s/SCLGROUP/%{SclGroup}/g" %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-SCLo-%{SclGroup}.repo
+install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-SCLo-scl-rh.repo
+sed -i -e "s/SCLGROUP/rh/g" %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-SCLo-scl-rh.repo
 install -p -d %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 
