@@ -1,0 +1,13 @@
+# CentOS-SCLo-SCLGROUP-Sources.repo
+#
+# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo for more
+# information
+
+[centos-sclo-SCLGROUP-sources]
+name=CentOS-$releasever - SCLo SCLGROUP Sources 
+baseurl=http://vault.centos.org/centos/$releasever/sclo/Source/SCLGROUP/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+

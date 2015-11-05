@@ -1,0 +1,12 @@
+# CentOS-SCLo-SCLGROUP-Debug.repo
+#
+# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo for more
+# information
+
+[centos-sclo-SCLGROUP-debuginfo]
+name=CentOS-$releasever - SCLo SCLGROUP Debuginfo
+baseurl=http://debuginfo.centos.org/centos/CENTOSMAJOR/sclo/$basearch
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
