@@ -1,5 +1,5 @@
 Name:       centos-release-scl
-Version:    1
+Version:    2
 Release:    1%{?dist}
 Summary:    Software collections from the CentOS SCLo SIG 
 
@@ -36,5 +36,10 @@ install -m 644 %{SOURCE2} %{buildroot}/%{_docdir}/centos-release-scl
 %{_docdir}/centos-release-scl/*
 
 %changelog
+* Thu Mar 24 2016 Thomas Oulevey <thomas.oulevey@cern.ch> - 2-1
+- disabled gpg check for -testing repos
+- enabled sources repositories
+- enabled debuginfo repositories
+
 * Fri Oct 02 2015 Thomas Oulevey <thomas.oulevey@cern.ch>
 - Initial version.

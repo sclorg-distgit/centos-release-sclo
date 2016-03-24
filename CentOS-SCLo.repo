@@ -13,6 +13,20 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 [centos-sclo-SCLGROUP-testing]
 name=CentOS-$releasever - SCLo SCLGROUP Testing
 baseurl=http://buildlogs.centos.org/centos/$releasever/sclo/$basearch/SCLGROUP/
+gpgcheck=0
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-SCLGROUP-source]
+name=CentOS-$releasever - SCLo SCLGROUP Sources
+baseurl=http://vault.centos.org/centos/$releasever/sclo/Source/SCLGROUP/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-SCLGROUP-debuginfo]
+name=CentOS-$releasever - SCLo SCLGROUP Debuginfo
+baseurl=http://debuginfo.centos.org/centos/$releasever/sclo/SCLGROUP/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
