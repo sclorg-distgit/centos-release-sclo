@@ -26,7 +26,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [centos-sclo-SCLGROUP-debuginfo]
 name=CentOS-$releasever - SCLo SCLGROUP Debuginfo
-baseurl=http://debuginfo.centos.org/centos/$releasever/sclo/SCLGROUP/$basearch/
+baseurl=http://debuginfo.centos.org/centos/$releasever/sclo/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
