@@ -1,6 +1,6 @@
 Name:       centos-release-scl
 Version:    2
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Software collections from the CentOS SCLo SIG 
 
 License:    GPLv2
@@ -21,7 +21,7 @@ yum Configs and basic docs for Software Collections as delivered via the CentOS 
 
 %install
 install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-SCLo-scl.repo
-sed -i -e "s/SCLGROUP/sclo/g" %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-SCLo-scl.repo
+sed -i -e "s/SCLGROUP/sclo/g; s/\$releasever/%{rhel}/g;" %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-SCLo-scl.repo
 install -p -d %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 
@@ -36,6 +36,9 @@ install -m 644 %{SOURCE2} %{buildroot}/%{_docdir}/centos-release-scl
 %{_docdir}/centos-release-scl/*
 
 %changelog
+* Fri May 20 2016 Dominic Cleal <dominic@cleal.org> - 2-2
+- replace releasever with hardcoded versions
+
 * Thu Mar 24 2016 Thomas Oulevey <thomas.oulevey@cern.ch> - 2-1
 - disabled gpg check for -testing repos
 - enabled sources repositories
