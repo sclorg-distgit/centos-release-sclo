@@ -1,6 +1,7 @@
 Name:       centos-release-scl
-Version:    2
-Release:    2%{?dist}
+Version:    7
+Release:    3%{?dist}
+Epoch:      10
 Summary:    Software collections from the CentOS SCLo SIG 
 
 License:    GPLv2
@@ -36,8 +37,14 @@ install -m 644 %{SOURCE2} %{buildroot}/%{_docdir}/centos-release-scl
 %{_docdir}/centos-release-scl/*
 
 %changelog
-* Fri May 20 2016 Dominic Cleal <dominic@cleal.org> - 2-2
+* Fri May 20 2016 Dominic Cleal <dominic@cleal.org> - 2-3
 - replace releasever with hardcoded versions
+
+* Tue Apr 06 2016 Thomas Oulevey <thomas.oulevey@cern.ch> - 7-2
+- bump release and fix Epoch
+
+* Tue Mar 29 2016 Thomas Oulevey <thomas.oulevey@cern.ch> - 7-1
+- bump release
 
 * Thu Mar 24 2016 Thomas Oulevey <thomas.oulevey@cern.ch> - 2-1
 - disabled gpg check for -testing repos
