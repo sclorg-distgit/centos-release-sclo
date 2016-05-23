@@ -37,7 +37,7 @@ install -m 644 %{SOURCE2} %{buildroot}/%{_docdir}/centos-release-scl
 %{_docdir}/centos-release-scl/*
 
 %changelog
-* Fri May 20 2016 Dominic Cleal <dominic@cleal.org> - 2-3
+* Fri May 20 2016 Dominic Cleal <dominic@cleal.org> - 7-3
 - replace releasever with hardcoded versions
 
 * Tue Apr 06 2016 Thomas Oulevey <thomas.oulevey@cern.ch> - 7-2
