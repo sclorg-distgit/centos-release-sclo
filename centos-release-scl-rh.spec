@@ -1,6 +1,6 @@
 Name:       centos-release-scl-rh
 Version:    2
-Release:    2%{?dist}
+Release:    3%{?dist}
 Summary:    Software collections from the CentOS SCLo SIG (upstream scl only)
 
 License:    GPLv2
@@ -12,6 +12,10 @@ Source2:    GPL
 BuildArch: noarch
 
 Requires:   system-release
+
+# Replace CentOS SCL rebuilds prior to version 6.8
+Obsoletes:  centos-release-SCL < 10:6-6
+Provides:   centos-release-SCL = 10:6-6%{?dist}
 
 %description
 yum Configs and basic docs for Software Collections as delivered via the CentOS SCLo SIG.
@@ -35,6 +39,9 @@ install -m 644 %{SOURCE2} %{buildroot}/%{_docdir}/centos-release-scl-rh
 %{_docdir}/centos-release-scl-rh/*
 
 %changelog
+* Tue Jun 14 2016 Dominic Cleal <dominic@cleal.org> - 2-3
+- obsolete centos-release-SCL with SIG rebuilds
+
 * Fri May 20 2016 Dominic Cleal <dominic@cleal.org> - 2-2
 - replace releasever with hardcoded versions
 
